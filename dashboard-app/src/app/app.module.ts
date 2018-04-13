@@ -14,8 +14,7 @@ import { SpringModule } from './spring/spring.module';
 import { SummerModule } from './summer/summer.module';
 import { FallModule } from './fall/fall.module';
 import { WinterModule } from './winter/winter.module';
-import { SpringDetailsComponent } from './spring/spring-details/spring-details.component';
-
+import { SharedModule } from './shared.module';
 import { Routes, RouterModule } from '@angular/router';
 import { routing } from './app.routing';
 import { DialogModule,
@@ -28,15 +27,14 @@ import { DialogModule,
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    SpringDetailsComponent
+    HeaderComponent
   ],
   imports: [
     DialogModule,
-  DataTableModule,
-  AccordionModule,
-  DropdownModule,
-  ChartModule,
+    DataTableModule,
+    AccordionModule,
+    DropdownModule,
+    ChartModule,
     FormsModule,
     HttpClientModule,
     BrowserModule,
@@ -46,10 +44,8 @@ import { DialogModule,
     SummerModule,
     FallModule,
     WinterModule,
-    routing
-  ],
-  exports: [
-    SpringDetailsComponent
+    routing,
+    SharedModule
   ],
   providers: [AppService],
   bootstrap: [AppComponent]

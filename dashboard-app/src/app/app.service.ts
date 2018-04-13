@@ -45,7 +45,7 @@ export class AppService {
   handleClose(event: any) {
     this.id = event.id;
     this.cases.forEach(item => {
-      if(item.id === this.cases[event.index - 1 ].id) {
+      if (item.id === this.cases[event.index - 1 ].id) {
         this.cases.splice(event.index - 1 , 1);
         this.selectedIndex = 0;
         this.selectedCaseIndex = null;

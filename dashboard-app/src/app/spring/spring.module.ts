@@ -4,7 +4,7 @@ import { SpringComponent } from './spring.component';
 import { SpringTabsComponent } from './spring-tabs/spring-tabs.component';
 import { SpringDashboardComponent } from './spring-dashboard/spring-dashboard.component';
 import { springRouting } from './spring.routes';
-
+import { SharedModule } from '../shared.module';
 import { DialogModule,
         DataTableModule,
         AccordionModule,
@@ -19,7 +19,8 @@ import { DialogModule,
     DialogModule,
     DataTableModule,
     AccordionModule,
-    ChartModule
+    ChartModule,
+    SharedModule
   ],
   declarations: [
     SpringComponent,

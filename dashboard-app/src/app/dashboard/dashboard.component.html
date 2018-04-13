@@ -69,6 +69,6 @@
   </p-tabPanel>
   <p-tabPanel *ngFor="let case of appService.cases; let i = index" header="case id {{case.id}}" [closable]="true"
   [selected]="i==appService.selectedCaseIndex">
-      <!-- <app-spring-details></app-spring-details> -->
+      <app-spring-details [data]="case"></app-spring-details>
   </p-tabPanel>
 </p-tabView>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { SharedModule } from '../shared.module';
 import { DashboardComponent } from './dashboard.component';
 import { DialogModule,
   DataTableModule,
@@ -15,7 +16,8 @@ import { DialogModule,
     AccordionModule,
     ChartModule,
     DropdownModule,
-    TabViewModule
+    TabViewModule,
+    SharedModule
   ],
   declarations: [
     DashboardComponent,
