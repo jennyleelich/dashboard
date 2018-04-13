@@ -1,3 +1,44 @@
-<p>
-  spring-dashboard works!
-</p>
+<div class="row panel-body">
+ <div class="col-sm-6 col-md-6 col-lg-6 padding-left-0">
+   <div class="panel panel-default">
+     <div class="panel-heading">
+        <span>Spring Festival</span>
+     </div>
+     <div class="panel-body">
+       <div class="text-center">
+         <p-chart type="bar" [data]=data [options]="options"></p-chart>
+       </div>
+     </div>
+   </div>
+ </div>
+ <div class="col-sm-6 col-md-6 col-lg-6 padding-right-0">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+       <span>Spring Activity</span>
+    </div>
+    <div class="panel-body">
+      <div class="text-center">
+        <p-chart type="pie" [data]=pieData [options]="pieOptions"></p-chart>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+<div class="row panel-body">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <span> Activity Details</span>
+    </div>
+    <div class="panel-body">
+      <div class="col-md-12 padding-left-0 padding-right-0">
+        <p-dataTable [value]="details" [responsive]=true scrollable="true" scrollHeight="300px" sortMode="multiple">
+            <p-column field="date" header="Event Date">
+                <ng-template let-col let-data="rowData" pTemplate="body">
+                    <span title="{{data.date}}">{{data.date}}</span>
+                </ng-template>
+            </p-column>
+        </p-dataTable>
+      </div>
+    </div>
+  </div>
+</div>

@@ -5,10 +5,22 @@ import { SpringTabsComponent } from './spring-tabs/spring-tabs.component';
 import { SpringDetailsComponent } from './spring-details/spring-details.component';
 import { SpringDashboardComponent } from './spring-dashboard/spring-dashboard.component';
 import { springRouting } from './spring.routes';
+
+import { DialogModule,
+        DataTableModule,
+        AccordionModule,
+        DropdownModule,
+        ChartModule
+} from 'primeng/primeng';
+
 @NgModule({
   imports: [
     CommonModule,
-    springRouting
+    springRouting,
+    DialogModule,
+    DataTableModule,
+    AccordionModule,
+    ChartModule
   ],
   declarations: [
     SpringComponent,
