@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SpringDetailsComponent } from './spring-details/spring-details.component';
 @Component({
   selector: 'app-spring',
   templateUrl: './spring.component.html',

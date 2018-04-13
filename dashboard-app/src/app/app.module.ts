@@ -14,15 +14,29 @@ import { SpringModule } from './spring/spring.module';
 import { SummerModule } from './summer/summer.module';
 import { FallModule } from './fall/fall.module';
 import { WinterModule } from './winter/winter.module';
+import { SpringDetailsComponent } from './spring/spring-details/spring-details.component';
 
 import { Routes, RouterModule } from '@angular/router';
 import { routing } from './app.routing';
+import { DialogModule,
+  DataTableModule,
+  AccordionModule,
+  DropdownModule,
+  ChartModule
+} from 'primeng/primeng';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    SpringDetailsComponent
   ],
   imports: [
+    DialogModule,
+  DataTableModule,
+  AccordionModule,
+  DropdownModule,
+  ChartModule,
     FormsModule,
     HttpClientModule,
     BrowserModule,
@@ -33,6 +47,9 @@ import { routing } from './app.routing';
     FallModule,
     WinterModule,
     routing
+  ],
+  exports: [
+    SpringDetailsComponent
   ],
   providers: [AppService],
   bootstrap: [AppComponent]
