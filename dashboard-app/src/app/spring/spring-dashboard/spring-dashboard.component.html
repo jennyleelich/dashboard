@@ -31,11 +31,32 @@
     </div>
     <div class="panel-body">
       <div class="col-md-12 padding-left-0 padding-right-0">
-        <p-dataTable [value]="details" [responsive]=true scrollable="true" scrollHeight="300px" sortMode="multiple">
-            <p-column field="date" header="Event Date">
+        <p-dataTable [value]="details" [paginator]="true" [rows]="8" [rowsPerPageOptions]="[8,10,20]"
+        [responsive]=true scrollable="true" scrollHeight="300px" sortMode="multiple">
+            <p-column field="name" header="Event Name">
                 <ng-template let-col let-data="rowData" pTemplate="body">
-                    <span title="{{data.date}}">{{data.date}}</span>
+                    <a class="link" title="{{data.name}}" (click)="showDetail(data.name)" >{{data.name}}</a>
                 </ng-template>
+            </p-column>
+            <p-column field="date" header="Event Date">
+              <ng-template let-col let-data="rowData" pTemplate="body">
+                  <span title="{{data.date}}">{{data.date}}</span>
+              </ng-template>
+             </p-column>
+            <p-column field="place" header="Event Place">
+                <ng-template let-col let-data="rowData" pTemplate="body">
+                    <span title="{{data.place}}">{{data.place}}</span>
+               </ng-template>
+            </p-column>
+            <p-column field="details" header="Event Details">
+              <ng-template let-col let-data="rowData" pTemplate="body">
+                  <span title="{{data.details}}">{{data.details}}</span>
+              </ng-template>
+            </p-column>
+            <p-column field="forWho" header="Event For Who">
+              <ng-template let-col let-data="rowData" pTemplate="body">
+                  <span title="{{data.forWho}}">{{data.forWho}}</span>
+              </ng-template>
             </p-column>
         </p-dataTable>
       </div>

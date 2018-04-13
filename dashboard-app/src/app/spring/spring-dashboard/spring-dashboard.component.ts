@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AppService } from '../../app.service';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-spring-dashboard',
   templateUrl: './spring-dashboard.component.html',
@@ -10,7 +11,8 @@ options: any;
 data: any;
 pieData: any;
 pieOptions: any;
-  constructor() {
+details: any;
+  constructor(private appService: AppService, private router: Router ) {
     this.data = {
       labels: ['High', 'Medium-High', 'Medium-Low', 'Low'],
       datasets: [
@@ -93,6 +95,12 @@ pieOptions: any;
   }
 
   ngOnInit() {
+    this.appService.getSpringDetail().subscribe(data => {
+      this.details = data;
+    });
   }
-
+  showDetail() {
+    this.appService.showSpringDetails = true;
+    this.router.navigate(['/spring/details']);
+  }
 }

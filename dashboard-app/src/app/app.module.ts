@@ -1,7 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
+import { AppService } from './app.service';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 
@@ -19,7 +23,10 @@ import { routing } from './app.routing';
     HeaderComponent,
   ],
   imports: [
+    FormsModule,
+    HttpClientModule,
     BrowserModule,
+    BrowserAnimationsModule,
     DashboardModule,
     SpringModule,
     SummerModule,
@@ -27,7 +34,7 @@ import { routing } from './app.routing';
     WinterModule,
     routing
   ],
-  providers: [],
+  providers: [AppService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
