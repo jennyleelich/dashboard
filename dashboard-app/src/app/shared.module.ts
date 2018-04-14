@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { SpringDetailsComponent } from './spring/spring-details/spring-details.component';
 import { DialogModule,
@@ -13,7 +14,9 @@ import { DialogModule,
     SpringDetailsComponent
   ],
   imports: [
-    AccordionModule
+    AccordionModule,
+    CommonModule,
+    BrowserModule
   ],
   exports: [
     SpringDetailsComponent

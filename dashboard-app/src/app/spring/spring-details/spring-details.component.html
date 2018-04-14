@@ -1,7 +1,9 @@
 <div class="container-fluid">
   <div class="panel">
     <div class="panel-body">
-      Event Id :   {{data.id}}
+      <div *ngIf="data!== undefined">
+        Case Id : {{data.id}}
+      </div>
       <p-accordion>
         <p-accordionTab header="Activity Details" [selected]="true">
           <div class="panel-body">

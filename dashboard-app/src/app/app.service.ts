@@ -28,8 +28,8 @@ export class AppService {
     });
     if (k) {
       this.cases.push(data);
-      this.selectedIndex = this.selectedCaseIndex + 1;
       this.selectedCaseIndex = this.cases.length - 1;
+      this.selectedIndex = this.selectedCaseIndex + 1;
     }
     if (k === 0) {
       for (let z = 0; z < this.cases.length; z++ ) {

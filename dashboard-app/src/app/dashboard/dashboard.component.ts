@@ -14,6 +14,11 @@ pieData: any;
 pieOptions: any;
 details: any;
   constructor(public appService: AppService, private router: Router ) {
+  }
+  ngOnInit() {
+    this.appService.getSpringDetail().subscribe(data => {
+      this.details = data;
+    });
     this.data = {
       labels: ['High', 'Medium-High', 'Medium-Low', 'Low'],
       datasets: [
@@ -94,13 +99,6 @@ details: any;
       animation: false
     };
   }
-
-  ngOnInit() {
-    this.appService.getSpringDetail().subscribe(data => {
-      this.details = data;
-    });
-  }
   showDetail() {
-
   }
 }

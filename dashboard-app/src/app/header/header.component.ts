@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AppService } from '../app.service';
 
 @Component({
   selector: 'app-header',
@@ -7,7 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router, private appService: AppService) {
+    this.router.events.subscribe(event => {
+      // Hanthisdle route change
+      this.appService.selectedIndex = 0;
+      this.appService.selectedCaseIndex = -1;
+  });
+   }
 
   ngOnInit() {
   }

@@ -7,9 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SpringDetailsComponent implements OnInit {
   @Input() data;
+  details: any;
   constructor() { }
 
   ngOnInit() {
+    this.details = this.data;
   }
 
 }
