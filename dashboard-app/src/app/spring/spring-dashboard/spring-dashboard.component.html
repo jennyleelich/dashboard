@@ -1,5 +1,5 @@
 <div class="row panel-body">
- <div class="col-sm-6 col-md-6 col-lg-6 padding-left-0">
+ <div class="col-sm-6 col-md-6 col-lg-6" style="padding-left:0px">
    <div class="panel panel-default">
      <div class="panel-heading">
         <span>Spring Festival</span>
@@ -11,7 +11,7 @@
      </div>
    </div>
  </div>
- <div class="col-sm-6 col-md-6 col-lg-6 padding-right-0">
+ <div class="col-sm-6 col-md-6 col-lg-6" style="padding-right:0px">
   <div class="panel panel-default">
     <div class="panel-heading">
        <span>Spring Activity</span>
@@ -31,11 +31,11 @@
     </div>
     <div class="panel-body">
       <div class="col-md-12 padding-left-0 padding-right-0">
-        <p-dataTable [value]="details" [paginator]="true" [rows]="8" [rowsPerPageOptions]="[8,10,20]"
+        <p-dataTable [value]="details" [paginator]="true" [rows]="4" [rowsPerPageOptions]="[8,10,20]"
         [responsive]=true scrollable="true" scrollHeight="300px" sortMode="multiple">
             <p-column field="name" header="Event Name">
                 <ng-template let-col let-data="rowData" pTemplate="body">
-                    <a class="link" title="{{data.name}}" (click)="showDetail(data.name)" >{{data.name}}</a>
+                    <button type="button" class="btn btn-link" title="{{data.name}}" (click)="showDetail(data.name)" >{{data.name}}</button>
                 </ng-template>
             </p-column>
             <p-column field="date" header="Event Date">
