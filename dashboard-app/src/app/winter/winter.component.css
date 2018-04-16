@@ -5,7 +5,7 @@
 #about a{
 	color:#0059b2;
 	font-size: 18px;
-	
+
 }
 #about .about{
 	background-color: #fff;
@@ -23,8 +23,8 @@
 	font-size:13px;
 }
 .jumbotron{
-    background-color: black;
-    color:#ccc;
+    background-color: gray;
+    color:white;
     margin-bottom: 0px;
 }
 .jumbotron h1 {
@@ -33,4 +33,3 @@
 .jumbotron h4 {
 	font-size: 16px;
 }
-	

@@ -11,9 +11,12 @@ export class AppService {
   public selectedIndex = 0;
   public id: any;
   public selectedCaseIndex = -1;
-
+  public sideBarNum = 'first';
   constructor(private http: HttpClient){
 
+  }
+  loadRight(data: any ) {
+    this.sideBarNum = data;
   }
   getSpringDetail() {
     return this.http.get('assets/json/spring-details.json');
