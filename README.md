@@ -28,7 +28,6 @@ Delplyment and Running Envirentment Request:
                  |-app.service.ts -------------------app provider 
                  |-app.routing.ts--------------------app routing configuration 
                  |-shared.module.ts------------------shared common component , in this app spring-detail component is common component .
-                 |-mail.service.spec.ts ------------- for testing mail.service.ts unit.                           
                   \-header component ------------     Includes application navigation bar.
                   \-dashboard module ------------     Includes click table Id could open multiple tab structure 
                   \-spring module ---------------     Includes open new tab structure,only open two tabs 
