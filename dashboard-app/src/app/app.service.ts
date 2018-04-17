@@ -12,7 +12,7 @@ export class AppService {
   public id: any;
   public selectedCaseIndex = -1;
   public sideBarNum = 'first';
-  constructor(private http: HttpClient){
+  constructor(private http: HttpClient) {
 
   }
   loadRight(data: any ) {
@@ -20,6 +20,9 @@ export class AppService {
   }
   getSpringDetail() {
     return this.http.get('assets/json/spring-details.json');
+  }
+  getSampleFormData() {
+    return this.http.get('assets/json/sampleData.json');
   }
   addingCase(data: any) {
     let k = 1;

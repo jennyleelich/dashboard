@@ -1,3 +1,111 @@
-<p>
-  fall works!
-</p>
+
+<div class="container-fluid" [formGroup]="sampleForm">
+  <div class="panel">
+    <div class="panel-body">
+      <h4>How to create Form and populate nested form data?</h4>
+</div>
+  </div>
+  <div class="panel">
+    <div class="panel-body">
+      <p-accordion>
+          <p-accordionTab header="General Information" [selected]="true">
+            <div class="panel-body" formGroupName="generalInformation">
+              <div class="row">
+                <div class="col-sm-4 col-md-4">
+                  <div class="form-group">
+                      <label for="">Name</label>
+                      <input type="text" class="form-control" placeholder="details" formControlName="teamName">
+                  </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                  <div class="form-group">
+                      <label for="">Id</label>
+                      <input type="text" class="form-control" placeholder="details" formControlName="teamId">
+                  </div>
+                </div>
+                <div class="col-sm-4 col-md-4">
+                  <div class="form-group">
+                      <label for="">Country</label>
+                      <input type="text" class="form-control" placeholder="details" formControlName="country">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </p-accordionTab>
+          <p-accordionTab header="Country Level Assessment" [selected]="true">
+              <div class="panel-body">
+                  <div class="col-md-12 padding-left-0 padding-right-0">
+                    <p-dataTable [value]="sampleForm.value.countryLevelAssessment.teamAssessment" [paginator]="false" [rows]="8" [rowsPerPageOptions]="[8,10,20]"
+                    [responsive]=true scrollable="true" scrollHeight="300px" sortMode="multiple">
+                    <p-header>Team Assessment</p-header>
+                        <p-column field="teamName" header="Team Name">
+                            <ng-template let-col let-data="rowData" pTemplate="body">
+                                <button type="button" class="btn btn-link" title="{{data.teamName}}"  >{{data.teamName}}</button>
+                            </ng-template>
+                        </p-column>
+                        <p-column field="assessment" header="Assessment">
+                          <ng-template let-col let-data="rowData" pTemplate="body">
+                              <span title="{{data.assessment}}">{{data.assessment}}</span>
+                          </ng-template>
+                         </p-column>
+                         <p-column field="rating" header="Rating">
+                            <ng-template let-col let-data="rowData" pTemplate="body">
+                                <span title="{{data.rating}}">{{data.rating}}</span>
+                           </ng-template>
+                        </p-column>
+                        <!-- <p-column field="place" header="Event Place">
+                            <ng-template let-col let-data="rowData" pTemplate="body">
+                                <span title="{{data.place}}">{{data.place}}</span>
+                           </ng-template>
+                        </p-column>
+                        <p-column field="details" header="Event Details">
+                          <ng-template let-col let-data="rowData" pTemplate="body">
+                              <span title="{{data.details}}">{{data.details}}</span>
+                          </ng-template>
+                        </p-column>
+                        <p-column field="forWho" header="Event For Who">
+                          <ng-template let-col let-data="rowData" pTemplate="body">
+                              <span title="{{data.forWho}}">{{data.forWho}}</span>
+                          </ng-template>
+                        </p-column> -->
+                    </p-dataTable>
+                  </div>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-12 padding-left-0 padding-right-0">
+                      <p-dataTable [value]="sampleForm.value.countryLevelAssessment.personalAssessment" [paginator]="false" [rows]="8" [rowsPerPageOptions]="[8,10,20]"
+                      [responsive]=true scrollable="true" scrollHeight="300px" sortMode="multiple">
+                      <p-header>Personal Assessment</p-header>
+                      <p-column field="personName" header="Person">
+                              <ng-template let-col let-data="rowData" pTemplate="body">
+                                  <button type="button" class="btn btn-link" title="{{data.personName}}"  >{{data.personName}}</button>
+                              </ng-template>
+                          </p-column>
+                          <p-column field="assessment" header="Assessment">
+                            <ng-template let-col let-data="rowData" pTemplate="body">
+                                <span title="{{data.assessment}}">{{data.assessment}}</span>
+                            </ng-template>
+                           </p-column>
+                          <p-column field="rating" header="Rating">
+                              <ng-template let-col let-data="rowData" pTemplate="body">
+                                  <span title="{{data.rating}}">{{data.rating}}</span>
+                             </ng-template>
+                          </p-column>
+                          <!-- <p-column field="details" header="Event Details">
+                            <ng-template let-col let-data="rowData" pTemplate="body">
+                                <span title="{{data.details}}">{{data.details}}</span>
+                            </ng-template>
+                          </p-column>
+                          <p-column field="forWho" header="Event For Who">
+                            <ng-template let-col let-data="rowData" pTemplate="body">
+                                <span title="{{data.forWho}}">{{data.forWho}}</span>
+                            </ng-template>
+                          </p-column> -->
+                      </p-dataTable>
+                    </div>
+                  </div>
+          </p-accordionTab>
+      </p-accordion>
+    </div>
+  </div>
+</div>

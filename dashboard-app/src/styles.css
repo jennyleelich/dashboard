@@ -34,4 +34,13 @@ body{
   color:#008ce6 !important;
   cursor:pointer
 }
+.ui-widget-header {
+  background: white;
 
+}
+.ui-datatable .ui-datatable-header {
+  text-align: left !important;
+  padding: .5em .75em;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
