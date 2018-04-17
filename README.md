@@ -22,10 +22,27 @@ Delplyment and Running Envirentment Request:
 
      The application has been deployed on the Heroku with the link: https://angular5-dashboard.herokuapp.com
    
-(4) About the structure of dashboard application.
-
-    Database: mongodb. version 3.4.3
-    Database Driver:mongoose 4.11.1
-    Database Data: sample data store on the mlab.com
-    connectionString =  'mongodb://jenny:jenny@ds021884.mlab.com:49737/myangular4'
+(4) About the Router structure of dashboard application.
+   
+    const APP_ROUTES: Routes = [
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  { path: 'spring', loadChildren: 'app/spring/spring.module#SpringModule'},
+  { path: 'summer', component: SummerComponent },
+  { path: 'fall', component: FallComponent },
+  { path: 'winter', component: WinterComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '', redirectTo: '', pathMatch: 'full'}
+   
+   const SPRING_ROUTES: Routes = [
+  {
+    path: 'spring',
+    component: SpringComponent,
+    children: [
+      { path: 'dashboard', component: SpringDashboardComponent},
+      { path: 'details', component: SpringDetailsComponent},
+      { path: '', redirectTo: 'dashboard', pathMatch: 'full'}
+    ]
+  }
+];
+                                           
    
