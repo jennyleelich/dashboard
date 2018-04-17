@@ -1,7 +1,7 @@
 # DashboardApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
-
+Angular 5 Application
 visit: https://angular5-dashboard.herokuapp.com
 
 Delplyment and Running Envirentment Request:
@@ -13,10 +13,10 @@ Delplyment and Running Envirentment Request:
 
 (2) Deployment to local
 
-       a) Go to the project folder, run command: npm install
-       b) run command "ng build -aot -prod" to generate the release version UI.
-       c) run the server command, run command: ng serve
-       d) open your browser, open the url:  http://localhost:4200
+    a) Go to the project folder, run command: npm install
+    b) run command "ng build -aot -prod" to generate the release version UI.
+    c) run the server command, run command: ng serve
+    d) open your browser, open the url:  http://localhost:4200
 
 (3) Deployed on the Heroku.
 
