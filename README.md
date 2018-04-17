@@ -2,26 +2,30 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
-## Development server
+visit: https://angular5-dashboard.herokuapp.com
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Delplyment and Running Envirentment Request:
 
-## Code scaffolding
+(1) Get the application source codes.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    a) Download from the github website, or
+    b) run git command:  git clone https://github.com/jennyleelich/dashboard.git
 
-## Build
+(2) Deployment to local
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+       a) Go to the project folder, run command: npm install
+       b) run command "ng build -aot -prod" to generate the release version UI.
+       c) run the server command, run command: ng serve
+       d) open your browser, open the url:  http://localhost:4200
 
-## Running unit tests
+(3) Deployed on the Heroku.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+     The application has been deployed on the Heroku with the link: https://angular5-dashboard.herokuapp.com
+   
+(4) About the structure of dashboard application.
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    Database: mongodb. version 3.4.3
+    Database Driver:mongoose 4.11.1
+    Database Data: sample data store on the mlab.com
+    connectionString =  'mongodb://jenny:jenny@ds021884.mlab.com:49737/myangular4'
+   
