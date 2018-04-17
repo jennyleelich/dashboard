@@ -25,20 +25,22 @@ Delplyment and Running Envirentment Request:
 (4) About the Router structure of dashboard application.
    
     a) const APP_ROUTES: Routes = [
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-    { path: 'spring', loadChildren: 'app/spring/spring.module#SpringModule'},
-    { path: 'summer', component: SummerComponent }, 
-    { path: 'fall', component: FallComponent },
-    { path: 'winter', component: WinterComponent }, 
-    { path: 'dashboard', component: DashboardComponent },
-    { path: '', redirectTo: '', pathMatch: 'full'} 
+        { path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+        { path: 'spring', loadChildren: 'app/spring/spring.module#SpringModule'},
+        { path: 'summer', component: SummerComponent }, 
+        { path: 'fall', component: FallComponent },
+        { path: 'winter', component: WinterComponent }, 
+        { path: 'dashboard', component: DashboardComponent },
+        { path: '', redirectTo: '', pathMatch: 'full'} 
+        ]
+    
     b) const SPRING_ROUTES: Routes = [
-    { path: 'spring',
-      component: SpringComponent,
-      children: [
-      { path: 'dashboard', component: SpringDashboardComponent},
-      { path: 'details', component: SpringDetailsComponent},
-      { path: '', redirectTo: 'dashboard', pathMatch: 'full'}
-    ] }];
+        { path: 'spring',
+          component: SpringComponent,
+          children: [
+          { path: 'dashboard', component: SpringDashboardComponent},
+          { path: 'details', component: SpringDetailsComponent},
+          { path: '', redirectTo: 'dashboard', pathMatch: 'full'}
+        ] ;
                                            
    
