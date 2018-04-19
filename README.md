@@ -34,14 +34,14 @@ Delplyment and Running Envirentment Request:
                        \-spring-dashboard component 
                        \-spring-details component --- Includes click dashboard link open new tab show detail information 
                        \-spring-tab component ---     Includes open new tab structure,only open two tabs 
-                       -spring component
-                       -spring.routes.ts ---- --------Includes children route
+                       |-spring component
+                       |-spring.routes.ts ---- --------Includes children route
                   \-fall module -----------------     Includes create nested form structure and how to populate form data
                   \-summer module --- ------------    Includes communicating between components different methods demo
                         \-left-side component ---------Includes right side switch menu
                         \-right-side-first component --Includes first right side component
                         \-right-side-second component--Includes second right side component
-                        -summer component ------- -----Includes container of the sub components
+                        |-summer component ------- -----Includes container of the sub components
                   \-winter module  ------------------- Includes about page.
              
    
