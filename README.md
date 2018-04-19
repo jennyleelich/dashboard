@@ -24,7 +24,8 @@ Delplyment and Running Envirentment Request:
    
 (4) App structure.
 
-      app(folder)-----app module--  
+    app(folder)--|-app.module.ts
+                 |-app.component.html
                  |-app.service.ts ---------------------app provider 
                  |-app.routing.ts----------------------app routing configuration 
                  |-shared.module.ts--------------------shared common component , in this app spring-detail component is common component .
